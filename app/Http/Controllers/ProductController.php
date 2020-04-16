@@ -27,6 +27,12 @@ class ProductController extends Controller
         return view('products.index', compact('products'));
     }
 
+    //coba pake resful api
+    public function indexApi()
+    {
+        return Product::all();
+    }
+
     public function create()
     {
         return view('products.create');
