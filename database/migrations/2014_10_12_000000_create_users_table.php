@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->useCurrent();
             $table->string('password');
-            $tavler->string('nohp');
+            $table->string('nohp');
             $table->rememberToken();
             $table->timestamps();
         });
