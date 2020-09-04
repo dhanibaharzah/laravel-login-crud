@@ -20,6 +20,7 @@
                     <a href="{{ url('product')}}" class="btn btn-danger">Manajemen Produk</a>
                     <a href="{{ url('crud')}}" class="btn btn-warning">Manajemen User</a>
                     <a href="{{ url('item')}}" class="btn btn-success">Manajemen Item</a>
+                    <a href="{{ url('barang')}}" class="btn btn-success">Manajemen Barang</a>
                                             
                 </div>
             </div>

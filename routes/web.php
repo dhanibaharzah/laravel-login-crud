@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('auth/login');
+    return view('welcome');
 });
 
 Auth::routes(['verify' => true]); 
@@ -47,4 +47,14 @@ Route::group(['prefix' => 'item'], function() {
     Route::get('/{id}', 'ItemController@edit');
     Route::put('/{id}', 'ItemController@update');
     Route::delete('/{id}', 'ItemController@destroy');
+});
+
+Auth::routes(['verify' => true]);
+Route::group(['prefix' => 'barang'], function() {
+    Route::get('/', 'BarangController@index');
+    Route::post('/', 'BarangController@save');
+    Route::get('/new', 'BarangController@create');
+    Route::get('/{id}', 'BarangController@edit');
+    Route::put('/{id}', 'BarangController@update');
+    Route::delete('/{id}', 'BarangController@destroy');
 });
